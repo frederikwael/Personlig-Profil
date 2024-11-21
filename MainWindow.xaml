@@ -7,6 +7,70 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="148.36"/>
+            <ColumnDefinition Width="519*"/>
+            <ColumnDefinition Width="124*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="118*"/>
+
+            <RowDefinition Height="145*"/>
+            <RowDefinition Height="145*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.ColumnSpan="3" Margin="148,10,10,10" Grid.RowSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="271*"/>
+                <RowDefinition Height="143*"/>
+            </Grid.RowDefinitions>
+
+            <Button
+            x:Name="ButtonTest"
+            Content="Se Mit CV!"
+            Foreground="Blue"
+            Click="ButtonTest_Click" Margin="-123,16,675,208" RenderTransformOrigin="0.405,0.527"
+            Hyperlink.Click="ButtonTest_Click"	      
+            />
+            
+            <ScrollViewer
+                HorizontalScrollBarVisibility="Auto"
+                VerticalScrollBarVisibility="Auto" Grid.RowSpan="4"
+           />
+        </Grid>
+
+
+        <Image
+            Grid.Column="1"
+            Source="/Assets/Picofme.jpg" Margin="523,1,-4,154" Grid.ColumnSpan="2" Grid.RowSpan="2"
+            />
+        <!--Stackpanel text content-->
+        <StackPanel 
+            x:Name="TestPanel"
+            Orientation="Vertical"  Margin="24,24,481,-204" Grid.RowSpan="2" Grid.Row="1" Grid.ColumnSpan="2">
+            <Label
+                Content="LinkedIn" Width="145" Hyperlink.Click="Label_Click" />
+            <Label 
+                Content="Github" Width="145" Hyperlink.Click="Label_Click"/>
+            <Label 
+                Content="Facebook" Width="155" Hyperlink.Click="Label_Click"/>
+            <Label 
+                Content="X" Width="115" Hyperlink.Click="Label_Click"/>
+
+        </StackPanel>
+        <TextBox TextWrapping="Wrap"
+            x:Name="Text"
+           
+            Grid.Row="1" 
+            Text="Jeg er 27 år gammel"
+                  
+            Grid.ColumnSpan="3" Margin="148,0,0,154" TextChanged="Text_TextChanged" Grid.RowSpan="2"/>
+        <TextBox FontSize="23" 
+    x:Name="Text2"
+    Text="Frederik's Personlige Profil" TextChanged="Text2_TextChanged" Margin="109,24,122,63" Grid.Column="1"/>
+
     </Grid>
 </Window>
+

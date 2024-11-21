@@ -23,6 +23,23 @@ namespace Personlig_Profil
         public MainWindow()
         {
             InitializeComponent();
+            string relativePath = "Assets/Picofme.jpeg";
+            string fullPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, relativePath);
         }
-    }
-}
+        
+
+        private 
+        string IComponentConnector;
+        { 
+       
+        }
+
+        private void Label_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonTest_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
